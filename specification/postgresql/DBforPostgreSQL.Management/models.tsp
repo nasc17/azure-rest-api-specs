@@ -2413,6 +2413,91 @@ model NameAvailabilityModel
 }
 
 /**
+ * Metric specification for an operation.
+ */
+model MetricSpecification {
+  /**
+   * Name of the metric.
+   */
+  name?: string;
+
+  /**
+   * Display name of the metric.
+   */
+  displayName?: string;
+
+  /**
+   * Display description of the metric.
+   */
+  displayDescription?: string;
+
+  /**
+   * Unit of the metric.
+   */
+  unit?: string;
+
+  /**
+   * Aggregation type of the metric.
+   */
+  aggregationType?: string;
+
+  /**
+   * Supported aggregation types for the metric.
+   */
+  supportedAggregationTypes?: string[];
+
+  /**
+   * Category of the metric.
+   */
+  category?: string;
+}
+
+/**
+ * Log specification for an operation.
+ */
+model LogSpecification {
+  /**
+   * Name of the log.
+   */
+  name?: string;
+
+  /**
+   * Display name of the log.
+   */
+  displayName?: string;
+
+  /**
+   * Blob duration for the log.
+   */
+  blobDuration?: string;
+}
+
+/**
+ * Service specification for an operation.
+ */
+model ServiceSpecification {
+  /**
+   * Metric specifications for the operation.
+   */
+  metricSpecifications?: MetricSpecification[];
+
+  /**
+   * Log specifications for the operation.
+   */
+  logSpecifications?: LogSpecification[];
+}
+
+/**
+ * Additional properties for operation metadata.
+ */
+model OperationProperties {
+  /**
+   * Service specification for the operation.
+   */
+  serviceSpecification?: ServiceSpecification;
+}
+
+/**
  * REST API operation definition.
  */
 model Operation {
@@ -2442,9 +2527,8 @@ model Operation {
   /**
    * Additional descriptions for the operation.
    */
-  #suppress "@azure-tools/typespec-azure-resource-manager/arm-no-record" "FIXME: Update justification, follow aka.ms/tsp/conversion-fix for details"
   @visibility(Lifecycle.Read)
-  properties?: Record<unknown>;
+  properties?: OperationProperties;
 }
 
 /**
