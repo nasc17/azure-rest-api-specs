@@ -1584,6 +1584,18 @@ model DatabaseProperties {
 }
 
 /**
+ * Properties of a tuning option.
+ */
+#suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-provisioning-state" "FIXME: Update justification, follow aka.ms/tsp/conversion-fix for details"
+model TuningOptionsProperties {
+  /**
+   * State of the tuning option.
+   */
+  @visibility(Lifecycle.Read)
+  state?: string;
+}
+
+/**
  * List of all databases in a server.
  */
 model DatabaseList is Azure.Core.Page<Database>;

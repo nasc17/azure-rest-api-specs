@@ -9248,6 +9248,12 @@
     "TuningOptions": {
       "type": "object",
       "description": "Impact on some metric if this recommended action is applied.",
+      "properties": {
+        "properties": {
+          "$ref": "#/definitions/TuningOptionsProperties",
+          "description": "The resource-specific properties for this resource."
+        }
+      },
       "allOf": [
         {
           "$ref": "../../../../../common-types/resource-management/v6/types.json#/definitions/ProxyResource"
@@ -9277,6 +9283,17 @@
       "required": [
         "value"
       ]
+    },
+    "TuningOptionsProperties": {
+      "type": "object",
+      "description": "Properties of a tuning option.",
+      "properties": {
+        "state": {
+          "type": "string",
+          "description": "State of the tuning option.",
+          "readOnly": true
+        }
+      }
     },
     "UserAssignedIdentity": {
       "type": "object",
