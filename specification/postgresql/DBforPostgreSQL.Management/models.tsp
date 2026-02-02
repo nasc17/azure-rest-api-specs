@@ -7,6 +7,7 @@ using TypeSpec.Rest;
 using TypeSpec.Http;
 using Azure.ResourceManager;
 using Azure.ResourceManager.Foundations;
+using TypeSpec.Versioning;
 
 namespace Microsoft.DBforPostgreSQL;
 
@@ -883,6 +884,10 @@ union RecommendationTypeEnum {
   ReIndex: "ReIndex",
   #suppress "@azure-tools/typespec-azure-core/documentation-required" "FIXME: Update justification, follow aka.ms/tsp/conversion-fix for details"
   AnalyzeTable: "AnalyzeTable",
+
+  #suppress "@azure-tools/typespec-azure-core/documentation-required" "FIXME: Update justification, follow aka.ms/tsp/conversion-fix for details"
+  @added(Versions.v2026_01_01)
+  VacuumTable: "VacuumTable",
 }
 
 /**
@@ -898,6 +903,10 @@ union RecommendationTypeParameterEnum {
   ReIndex: "ReIndex",
   #suppress "@azure-tools/typespec-azure-core/documentation-required" "FIXME: Update justification, follow aka.ms/tsp/conversion-fix for details"
   AnalyzeTable: "AnalyzeTable",
+
+  #suppress "@azure-tools/typespec-azure-core/documentation-required" "FIXME: Update justification, follow aka.ms/tsp/conversion-fix for details"
+  @added(Versions.v2026_01_01)
+  VacuumTable: "VacuumTable",
 }
 
 /**
