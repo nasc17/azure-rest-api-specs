@@ -8727,14 +8727,22 @@
           "description": "Metric specifications for the operation.",
           "items": {
             "$ref": "#/definitions/MetricSpecification"
-          }
+          },
+          "readOnly": true,
+          "x-ms-identifiers": [
+            "name"
+          ]
         },
         "logSpecifications": {
           "type": "array",
           "description": "Log specifications for the operation.",
           "items": {
             "$ref": "#/definitions/LogSpecification"
-          }
+          },
+          "readOnly": true,
+          "x-ms-identifiers": [
+            "name"
+          ]
         }
       }
     },

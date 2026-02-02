@@ -2500,11 +2500,15 @@ model ServiceSpecification {
   /**
    * Metric specifications for the operation.
    */
+  @visibility(Lifecycle.Read)
+  @identifiers(#["name"])
   metricSpecifications?: MetricSpecification[];
 
   /**
    * Log specifications for the operation.
    */
+  @visibility(Lifecycle.Read)
+  @identifiers(#["name"])
   logSpecifications?: LogSpecification[];
 }
 
