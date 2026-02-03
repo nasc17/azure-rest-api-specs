@@ -6,13 +6,12 @@
     "resourceGroupName": "myResourceGroup",
     "clusterName": "myHorizonCluster",
     "api-version": "2026-01-20-preview",
-    "resource": {
-      "location": "canadacentral",
-      "tags": {
-        "environment": "production",
-        "team": "data-platform"
-      },
-      "properties": {
+    "location": "canadacentral",
+    "tags": {
+      "environment": "production",
+      "team": "data-platform"
+    },
+    "properties": {
         "administratorLogin": "dbadmin",
         "administratorLoginPassword": "examplepassword",
         "version": "1.0",
@@ -29,7 +28,6 @@
           "mode": "ZoneRedundant"
         }
       }
-    }
   },
   "responses": {
     "200": {

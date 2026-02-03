@@ -8,9 +8,7 @@
     "poolName": "myPool",
     "replicaName": "myReplica",
     "api-version": "2026-01-20-preview",
-    "resource": {
-      "properties": {}
-    }
+    "properties": {}
   },
   "responses": {
     "200": {
