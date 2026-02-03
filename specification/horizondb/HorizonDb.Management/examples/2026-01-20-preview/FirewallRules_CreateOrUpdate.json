@@ -10,7 +10,8 @@
     "resource": {
       "properties": {
         "startIpAddress": "10.0.0.1",
-        "endIpAddress": "10.0.0.10"
+        "endIpAddress": "10.0.0.10",
+        "description": "Allow access from corporate network"
       }
     }
   },
@@ -23,6 +24,7 @@
         "properties": {
           "startIpAddress": "10.0.0.1",
           "endIpAddress": "10.0.0.10",
+          "description": "Allow access from corporate network",
           "provisioningState": "Succeeded"
         },
         "systemData": {
@@ -43,7 +45,8 @@
         "properties": {
           "startIpAddress": "10.0.0.1",
           "endIpAddress": "10.0.0.10",
-          "provisioningState": "Creating"
+          "description": "Allow access from corporate network",
+          "provisioningState": "InProgress"
         },
         "systemData": {
           "createdBy": "user@example.com",

@@ -21,7 +21,7 @@
         "properties": {
           "administratorLogin": "dbadmin",
           "version": "1.0",
-          "createMode": "Default",
+          "createMode": "Create",
           "vCores": 4,
           "replicaCount": 2,
           "availabilityZone": "1",

@@ -9,7 +9,11 @@
     "api-version": "2026-01-20-preview",
     "resource": {
       "properties": {
-        "replicaCount": 2
+        "sku": "Standard_D4s_v3",
+        "location": "canadacentral",
+        "replicaCount": 2,
+        "administratorLogin": "pooladmin",
+        "administratorLoginPassword": "examplepassword"
       }
     }
   },
@@ -20,8 +24,11 @@
         "name": "myPool",
         "type": "Microsoft.HorizonDb/clusters/pools",
         "properties": {
-          "replicaCount": 2,
+          "sku": "Standard_D4s_v3",
+          "location": "canadacentral",
           "state": "Ready",
+          "replicaCount": 2,
+          "administratorLogin": "pooladmin",
           "provisioningState": "Succeeded"
         },
         "systemData": {
@@ -40,8 +47,11 @@
         "name": "myPool",
         "type": "Microsoft.HorizonDb/clusters/pools",
         "properties": {
-          "replicaCount": 2,
+          "sku": "Standard_D4s_v3",
+          "location": "canadacentral",
           "state": "Starting",
+          "replicaCount": 2,
+          "administratorLogin": "pooladmin",
           "provisioningState": "InProgress"
         },
         "systemData": {

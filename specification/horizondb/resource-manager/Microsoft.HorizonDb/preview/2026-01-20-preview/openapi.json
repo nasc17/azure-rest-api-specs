@@ -1104,28 +1104,29 @@
     }
   },
   "definitions": {
-    "CreateMode": {
+    "CreateModeCluster": {
       "type": "string",
       "description": "The mode to create a new HorizonDb cluster",
       "enum": [
-        "Default",
         "Create",
+        "Update",
         "PointInTimeRestore",
-        "Replica"
+        "GeoRestore",
+        "ReviveDropped"
       ],
       "x-ms-enum": {
-        "name": "CreateMode",
+        "name": "CreateModeCluster",
         "modelAsString": true,
         "values": [
-          {
-            "name": "Default",
-            "value": "Default",
-            "description": "Default cluster creation mode"
-          },
           {
             "name": "Create",
             "value": "Create",
             "description": "Create a new cluster"
+          },
+          {
+            "name": "Update",
+            "value": "Update",
+            "description": "Update an existing cluster"
           },
           {
             "name": "PointInTimeRestore",
@@ -1133,9 +1134,38 @@
             "description": "Create cluster from point-in-time restore"
           },
           {
-            "name": "Replica",
-            "value": "Replica",
-            "description": "Create cluster as read replica"
+            "name": "GeoRestore",
+            "value": "GeoRestore",
+            "description": "Create cluster from geo restore"
+          },
+          {
+            "name": "ReviveDropped",
+            "value": "ReviveDropped",
+            "description": "Revive a dropped cluster"
+          }
+        ]
+      }
+    },
+    "CreateModePool": {
+      "type": "string",
+      "description": "The mode to create a new HorizonDb cluster",
+      "enum": [
+        "Create",
+        "Update"
+      ],
+      "x-ms-enum": {
+        "name": "CreateModePool",
+        "modelAsString": true,
+        "values": [
+          {
+            "name": "Create",
+            "value": "Create",
+            "description": "Create a new pool"
+          },
+          {
+            "name": "Update",
+            "value": "Update",
+            "description": "Update an existing pool"
           }
         ]
       }
@@ -1271,7 +1301,7 @@
           "description": "The version of the Orion Db"
         },
         "createMode": {
-          "$ref": "#/definitions/CreateMode",
+          "$ref": "#/definitions/CreateModeCluster",
           "description": "The mode to create a new HorizonDb cluster"
         },
         "pointInTimeUTC": {
@@ -1394,11 +1424,27 @@
       "properties": {
         "startIpAddress": {
           "type": "string",
-          "description": "The start IP address of the firewall rule"
+          "description": "The start IP address of the firewall rule",
+          "x-ms-mutability": [
+            "read",
+            "create"
+          ]
         },
         "endIpAddress": {
           "type": "string",
-          "description": "The end IP address of the firewall rule"
+          "description": "The end IP address of the firewall rule",
+          "x-ms-mutability": [
+            "read",
+            "create"
+          ]
+        },
+        "description": {
+          "type": "string",
+          "description": "The description of the OrionDb firewall rule",
+          "x-ms-mutability": [
+            "read",
+            "create"
+          ]
         },
         "provisioningState": {
           "$ref": "#/definitions/ProvisioningState",
@@ -1440,16 +1486,73 @@
       "type": "object",
       "description": "Properties of a HorizonDb pool",
       "properties": {
-        "replicaCount": {
-          "type": "integer",
-          "format": "int32",
-          "description": "Number of replicas in the pool",
-          "minimum": 1
+        "sku": {
+          "type": "string",
+          "description": "The SKU for the OrionDb pool",
+          "x-ms-mutability": [
+            "read",
+            "create"
+          ]
+        },
+        "location": {
+          "type": "string",
+          "description": "The location of the OrionDb pool",
+          "x-ms-mutability": [
+            "read",
+            "create"
+          ]
         },
         "state": {
           "$ref": "#/definitions/State",
           "description": "Current state of the pool",
           "readOnly": true
+        },
+        "replicaCount": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Number of replicas in the pool",
+          "x-ms-mutability": [
+            "update"
+          ]
+        },
+        "administratorLogin": {
+          "type": "string",
+          "description": "The administrator login for the pool",
+          "x-ms-mutability": [
+            "create"
+          ]
+        },
+        "administratorLoginPassword": {
+          "type": "string",
+          "format": "password",
+          "description": "The administrator login password for the pool",
+          "x-ms-mutability": [
+            "update"
+          ],
+          "x-ms-secret": true
+        },
+        "version": {
+          "type": "string",
+          "description": "The version of the OrionDb pool",
+          "x-ms-mutability": [
+            "read",
+            "create"
+          ]
+        },
+        "tags": {
+          "type": "string",
+          "description": "The tags for the OrionDb pool",
+          "x-ms-mutability": [
+            "read",
+            "create"
+          ]
+        },
+        "createMode": {
+          "$ref": "#/definitions/CreateModePool",
+          "description": "The create mode for the pool",
+          "x-ms-mutability": [
+            "update"
+          ]
         },
         "provisioningState": {
           "$ref": "#/definitions/ProvisioningState",

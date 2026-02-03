@@ -35,7 +35,7 @@ model HorizonDbClusterProperties {
   /**
    * The mode to create a new HorizonDb cluster
    */
-  createMode?: CreateMode;
+  createMode?: CreateModeCluster;
 
   /**
    * Restore point creation time (ISO8601 format), specifying the time to restore from
@@ -160,10 +160,16 @@ model HorizonDbClusterForUpdate {
  */
 model HorizonDbPoolProperties {
   /**
-   * Number of replicas in the pool
+   * The SKU for the OrionDb pool
    */
-  @minValue(1)
-  replicaCount?: int32;
+  @visibility(Lifecycle.Create, Lifecycle.Read)
+  sku?: string;
+
+  /**
+   * The location of the OrionDb pool
+   */
+  @visibility(Lifecycle.Create, Lifecycle.Read)
+  location?: string;
 
   /**
    * Current state of the pool
@@ -171,6 +177,43 @@ model HorizonDbPoolProperties {
   @doc("Current state of the pool")
   @visibility(Lifecycle.Read)
   state?: State;
+
+  /**
+   * Number of replicas in the pool
+   */
+  @visibility(Lifecycle.Update)
+  replicaCount?: int32;
+
+  /**
+   * The administrator login for the pool
+   */
+  @visibility(Lifecycle.Create)
+  administratorLogin?: string;
+
+  /**
+   * The administrator login password for the pool
+   */
+  @secret
+  @visibility(Lifecycle.Update)
+  administratorLoginPassword?: string;
+
+  /**
+   * The version of the OrionDb pool
+   */
+  @visibility(Lifecycle.Create, Lifecycle.Read)
+  version?: string;
+
+  /**
+   * The tags for the OrionDb pool
+   */
+  @visibility(Lifecycle.Create, Lifecycle.Read)
+  tags?: string;
+
+  /**
+   * The create mode for the pool
+   */
+  @visibility(Lifecycle.Update)
+  createMode?: CreateModePool;
 
   /**
    * The provisioning state of the pool
@@ -345,12 +388,20 @@ model HorizonDbFirewallRuleProperties {
   /**
    * The start IP address of the firewall rule
    */
+  @visibility(Lifecycle.Create, Lifecycle.Read)
   startIpAddress: string;
 
   /**
    * The end IP address of the firewall rule
    */
+  @visibility(Lifecycle.Create, Lifecycle.Read)
   endIpAddress: string;
+
+  /**
+   * The description of the OrionDb firewall rule
+   */
+  @visibility(Lifecycle.Create, Lifecycle.Read)
+  description?: string;
 
   /**
    * The provisioning state of the firewall rule
@@ -363,20 +414,36 @@ model HorizonDbFirewallRuleProperties {
 /**
  * The mode to create a new HorizonDb cluster
  */
-union CreateMode {
+union CreateModeCluster {
   string,
-
-  /** Default cluster creation mode */
-  Default: "Default",
 
   /** Create a new cluster */
   Create: "Create",
 
+  /** Update an existing cluster */
+  Update: "Update",
+
   /** Create cluster from point-in-time restore */
   PointInTimeRestore: "PointInTimeRestore",
 
-  /** Create cluster as read replica */
-  Replica: "Replica",
+  /** Create cluster from geo restore */
+  GeoRestore: "GeoRestore",
+
+  /** Revive a dropped cluster */
+  ReviveDropped: "ReviveDropped",
+}
+
+/**
+ * The mode to create a new HorizonDb cluster
+ */
+union CreateModePool {
+  string,
+
+  /** Create a new pool */
+  Create: "Create",
+
+  /** Update an existing pool */
+  Update: "Update",
 }
 
 /**
