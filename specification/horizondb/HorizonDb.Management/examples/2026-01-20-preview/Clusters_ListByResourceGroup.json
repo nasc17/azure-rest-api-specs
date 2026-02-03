@@ -1,0 +1,53 @@
+{
+  "operationId": "Clusters_ListByResourceGroup",
+  "title": "List HorizonDb clusters in a resource group",
+  "parameters": {
+    "subscriptionId": "ffffffff-ffff-ffff-ffff-ffffffffffff",
+    "resourceGroupName": "myResourceGroup",
+    "api-version": "2026-01-20-preview"
+  },
+  "responses": {
+    "200": {
+      "body": {
+        "value": [
+          {
+            "id": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/myResourceGroup/providers/Microsoft.HorizonDb/clusters/myHorizonCluster1",
+            "name": "myHorizonCluster1",
+            "type": "Microsoft.HorizonDb/clusters",
+            "location": "canadacentral",
+            "tags": {
+              "environment": "production"
+            },
+            "properties": {
+              "administratorLogin": "dbadmin",
+              "version": "1.0",
+              "vCores": 4,
+              "replicaCount": 2,
+              "state": "Ready",
+              "fullyQualifiedDomainName": "myHorizonCluster1.horizon.database.azure.com",
+              "provisioningState": "Succeeded"
+            }
+          },
+          {
+            "id": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/myResourceGroup/providers/Microsoft.HorizonDb/clusters/myHorizonCluster2",
+            "name": "myHorizonCluster2",
+            "type": "Microsoft.HorizonDb/clusters",
+            "location": "West US 2",
+            "tags": {
+              "environment": "development"
+            },
+            "properties": {
+              "administratorLogin": "admin",
+              "version": "1.0",
+              "vCores": 2,
+              "replicaCount": 1,
+              "state": "Ready",
+              "fullyQualifiedDomainName": "myHorizonCluster2.horizon.database.azure.com",
+              "provisioningState": "Succeeded"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

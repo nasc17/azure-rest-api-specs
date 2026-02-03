@@ -1,0 +1,56 @@
+{
+  "operationId": "FirewallRules_CreateOrUpdate",
+  "title": "Create or update a HorizonDb firewall rule",
+  "parameters": {
+    "subscriptionId": "ffffffff-ffff-ffff-ffff-ffffffffffff",
+    "resourceGroupName": "myResourceGroup",
+    "clusterName": "myHorizonCluster",
+    "firewallRuleName": "myFirewallRule",
+    "api-version": "2026-01-20-preview",
+    "resource": {
+      "properties": {
+        "startIpAddress": "10.0.0.1",
+        "endIpAddress": "10.0.0.10"
+      }
+    }
+  },
+  "responses": {
+    "200": {
+      "body": {
+        "id": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/myResourceGroup/providers/Microsoft.HorizonDb/clusters/myHorizonCluster/firewallRules/myFirewallRule",
+        "name": "myFirewallRule",
+        "type": "Microsoft.HorizonDb/clusters/firewallRules",
+        "properties": {
+          "startIpAddress": "10.0.0.1",
+          "endIpAddress": "10.0.0.10",
+          "provisioningState": "Succeeded"
+        },
+        "systemData": {
+          "createdBy": "user@example.com",
+          "createdByType": "User",
+          "createdAt": "2026-01-20T10:00:00.000Z",
+          "lastModifiedBy": "user@example.com",
+          "lastModifiedByType": "User",
+          "lastModifiedAt": "2026-01-20T10:00:00.000Z"
+        }
+      }
+    },
+    "201": {
+      "body": {
+        "id": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/myResourceGroup/providers/Microsoft.HorizonDb/clusters/myHorizonCluster/firewallRules/myFirewallRule",
+        "name": "myFirewallRule",
+        "type": "Microsoft.HorizonDb/clusters/firewallRules",
+        "properties": {
+          "startIpAddress": "10.0.0.1",
+          "endIpAddress": "10.0.0.10",
+          "provisioningState": "Creating"
+        },
+        "systemData": {
+          "createdBy": "user@example.com",
+          "createdByType": "User",
+          "createdAt": "2026-01-20T10:00:00.000Z"
+        }
+      }
+    }
+  }
+}
