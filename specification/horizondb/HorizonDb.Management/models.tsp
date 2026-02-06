@@ -230,6 +230,7 @@ model Network {
   /**
    * The flag indicating whether public ip is requested for the server
    */
+  #suppress "@azure-tools/typespec-azure-resource-manager/secret-prop" "publicNetworkAccess is a configuration flag, not sensitive data"
   @visibility(Lifecycle.Read)
   publicNetworkAccess?: string;
 

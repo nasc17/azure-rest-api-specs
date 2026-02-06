@@ -1,0 +1,55 @@
+{
+  "operationId": "HorizonDbClusters_Get",
+  "title": "Get a HorizonDb cluster",
+  "parameters": {
+    "subscriptionId": "ffffffff-ffff-ffff-ffff-ffffffffffff",
+    "resourceGroupName": "myResourceGroup",
+    "clusterName": "myHorizonCluster",
+    "api-version": "2026-01-20-preview"
+  },
+  "responses": {
+    "200": {
+      "body": {
+        "id": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/myResourceGroup/providers/Microsoft.HorizonDb/clusters/myHorizonCluster",
+        "name": "myHorizonCluster",
+        "type": "Microsoft.HorizonDb/clusters",
+        "location": "canadacentral",
+        "tags": {
+          "environment": "production",
+          "team": "data-platform"
+        },
+        "properties": {
+          "administratorLogin": "dbadmin",
+          "version": "17",
+          "createMode": "Create",
+          "vCores": 4,
+          "replicaCount": 2,
+          "availabilityZone": "1",
+          "processorType": "Intel",
+          "network": {
+            "publicNetworkAccess": "Enabled",
+            "delegatedSubnetResourceId": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet",
+            "privateDnsZoneArmResourceId": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/myResourceGroup/providers/Microsoft.Network/privateDnsZones/horizondb.private.postgres.database.azure.com"
+          },
+          "highAvailability": {
+            "mode": "ZoneRedundant",
+            "state": "Healthy",
+            "standbyAvailabilityZone": "2"
+          },
+          "state": "Ready",
+          "fullyQualifiedDomainName": "myHorizonCluster.horizon.database.azure.com",
+          "readonlyEndpoint": "myHorizonCluster-ro.horizon.database.azure.com",
+          "provisioningState": "Succeeded"
+        },
+        "systemData": {
+          "createdBy": "user@example.com",
+          "createdByType": "User",
+          "createdAt": "2026-01-20T10:00:00.000Z",
+          "lastModifiedBy": "user@example.com",
+          "lastModifiedByType": "User",
+          "lastModifiedAt": "2026-01-20T10:00:00.000Z"
+        }
+      }
+    }
+  }
+}

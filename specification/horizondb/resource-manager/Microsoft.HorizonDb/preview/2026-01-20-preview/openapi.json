@@ -68,11 +68,6 @@
             "$ref": "../../../../../common-types/resource-management/v6/types.json#/parameters/ApiVersionParameter"
           }
         ],
-        "x-ms-examples": {
-          "List operations": {
-            "$ref": "./examples/2026-01-20-preview/Operations_List.json"
-          }
-        },
         "responses": {
           "200": {
             "description": "Azure operation completed successfully.",
@@ -85,6 +80,11 @@
             "schema": {
               "$ref": "../../../../../common-types/resource-management/v6/types.json#/definitions/ErrorResponse"
             }
+          }
+        },
+        "x-ms-examples": {
+          "List operations for Microsoft.HorizonDb": {
+            "$ref": "./examples/Operations_List.json"
           }
         },
         "x-ms-pageable": {
@@ -107,11 +107,6 @@
             "$ref": "../../../../../common-types/resource-management/v6/types.json#/parameters/SubscriptionIdParameter"
           }
         ],
-        "x-ms-examples": {
-          "List clusters by subscription": {
-            "$ref": "./examples/2026-01-20-preview/Clusters_ListBySubscription.json"
-          }
-        },
         "responses": {
           "200": {
             "description": "Azure operation completed successfully.",
@@ -124,6 +119,11 @@
             "schema": {
               "$ref": "../../../../../common-types/resource-management/v6/types.json#/definitions/ErrorResponse"
             }
+          }
+        },
+        "x-ms-examples": {
+          "List HorizonDb clusters by subscription": {
+            "$ref": "./examples/Clusters_ListBySubscription.json"
           }
         },
         "x-ms-pageable": {
@@ -149,11 +149,6 @@
             "$ref": "../../../../../common-types/resource-management/v6/types.json#/parameters/ResourceGroupNameParameter"
           }
         ],
-        "x-ms-examples": {
-          "List clusters by resource group": {
-            "$ref": "./examples/2026-01-20-preview/Clusters_ListByResourceGroup.json"
-          }
-        },
         "responses": {
           "200": {
             "description": "Azure operation completed successfully.",
@@ -166,6 +161,11 @@
             "schema": {
               "$ref": "../../../../../common-types/resource-management/v6/types.json#/definitions/ErrorResponse"
             }
+          }
+        },
+        "x-ms-examples": {
+          "List HorizonDb clusters in a resource group": {
+            "$ref": "./examples/Clusters_ListByResourceGroup.json"
           }
         },
         "x-ms-pageable": {
@@ -201,11 +201,6 @@
             "pattern": "^[a-zA-Z0-9][-a-zA-Z0-9]*[a-zA-Z0-9]$"
           }
         ],
-        "x-ms-examples": {
-          "Get cluster": {
-            "$ref": "./examples/2026-01-20-preview/Clusters_Get.json"
-          }
-        },
         "responses": {
           "200": {
             "description": "Azure operation completed successfully.",
@@ -218,6 +213,11 @@
             "schema": {
               "$ref": "../../../../../common-types/resource-management/v6/types.json#/definitions/ErrorResponse"
             }
+          }
+        },
+        "x-ms-examples": {
+          "Get a HorizonDb cluster": {
+            "$ref": "./examples/Clusters_Get.json"
           }
         }
       },
@@ -257,11 +257,6 @@
             }
           }
         ],
-        "x-ms-examples": {
-          "Create cluster": {
-            "$ref": "./examples/2026-01-20-preview/Clusters_CreateOrUpdate.json"
-          }
-        },
         "responses": {
           "200": {
             "description": "Resource 'HorizonDbCluster' update operation succeeded",
@@ -291,6 +286,11 @@
             "schema": {
               "$ref": "../../../../../common-types/resource-management/v6/types.json#/definitions/ErrorResponse"
             }
+          }
+        },
+        "x-ms-examples": {
+          "Create or update a HorizonDb cluster": {
+            "$ref": "./examples/Clusters_CreateOrUpdate.json"
           }
         },
         "x-ms-long-running-operation-options": {
@@ -335,11 +335,6 @@
             }
           }
         ],
-        "x-ms-examples": {
-          "Update cluster": {
-            "$ref": "./examples/2026-01-20-preview/Clusters_Update.json"
-          }
-        },
         "responses": {
           "200": {
             "description": "Azure operation completed successfully.",
@@ -366,6 +361,11 @@
             "schema": {
               "$ref": "../../../../../common-types/resource-management/v6/types.json#/definitions/ErrorResponse"
             }
+          }
+        },
+        "x-ms-examples": {
+          "Update a HorizonDb cluster": {
+            "$ref": "./examples/Clusters_Update.json"
           }
         },
         "x-ms-long-running-operation-options": {
@@ -401,11 +401,6 @@
             "pattern": "^[a-zA-Z0-9][-a-zA-Z0-9]*[a-zA-Z0-9]$"
           }
         ],
-        "x-ms-examples": {
-          "Delete cluster": {
-            "$ref": "./examples/2026-01-20-preview/Clusters_Delete.json"
-          }
-        },
         "responses": {
           "202": {
             "description": "Resource deletion accepted.",
@@ -429,6 +424,11 @@
             "schema": {
               "$ref": "../../../../../common-types/resource-management/v6/types.json#/definitions/ErrorResponse"
             }
+          }
+        },
+        "x-ms-examples": {
+          "Delete a HorizonDb cluster": {
+            "$ref": "./examples/Clusters_Delete.json"
           }
         },
         "x-ms-long-running-operation-options": {
@@ -484,11 +484,6 @@
             }
           }
         ],
-        "x-ms-examples": {
-          "Create or update pool": {
-            "$ref": "./examples/2026-01-20-preview/Pools_CreateOrUpdate.json"
-          }
-        },
         "responses": {
           "200": {
             "description": "Resource 'HorizonDbPool' update operation succeeded",
@@ -518,6 +513,11 @@
             "schema": {
               "$ref": "../../../../../common-types/resource-management/v6/types.json#/definitions/ErrorResponse"
             }
+          }
+        },
+        "x-ms-examples": {
+          "Create or update a HorizonDb pool": {
+            "$ref": "./examples/Pools_CreateOrUpdate.json"
           }
         },
         "x-ms-long-running-operation-options": {
@@ -572,11 +572,6 @@
             }
           }
         ],
-        "x-ms-examples": {
-          "Update pool": {
-            "$ref": "./examples/2026-01-20-preview/Pools_Update.json"
-          }
-        },
         "responses": {
           "200": {
             "description": "Azure operation completed successfully.",
@@ -603,6 +598,11 @@
             "schema": {
               "$ref": "../../../../../common-types/resource-management/v6/types.json#/definitions/ErrorResponse"
             }
+          }
+        },
+        "x-ms-examples": {
+          "Update a HorizonDb pool": {
+            "$ref": "./examples/Pools_Update.json"
           }
         },
         "x-ms-long-running-operation-options": {
@@ -648,11 +648,6 @@
             "pattern": "^[a-zA-Z0-9][-a-zA-Z0-9]*[a-zA-Z0-9]$"
           }
         ],
-        "x-ms-examples": {
-          "Delete pool": {
-            "$ref": "./examples/2026-01-20-preview/Pools_Delete.json"
-          }
-        },
         "responses": {
           "202": {
             "description": "Resource deletion accepted.",
@@ -676,6 +671,11 @@
             "schema": {
               "$ref": "../../../../../common-types/resource-management/v6/types.json#/definitions/ErrorResponse"
             }
+          }
+        },
+        "x-ms-examples": {
+          "Delete a HorizonDb pool": {
+            "$ref": "./examples/Pools_Delete.json"
           }
         },
         "x-ms-long-running-operation-options": {
@@ -732,11 +732,6 @@
             "pattern": "^[a-zA-Z0-9][-a-zA-Z0-9]*[a-zA-Z0-9]$"
           }
         ],
-        "x-ms-examples": {
-          "Get firewall rule": {
-            "$ref": "./examples/2026-01-20-preview/FirewallRules_Get.json"
-          }
-        },
         "responses": {
           "200": {
             "description": "Azure operation completed successfully.",
@@ -749,6 +744,11 @@
             "schema": {
               "$ref": "../../../../../common-types/resource-management/v6/types.json#/definitions/ErrorResponse"
             }
+          }
+        },
+        "x-ms-examples": {
+          "Get a HorizonDb firewall rule": {
+            "$ref": "./examples/FirewallRules_Get.json"
           }
         }
       },
@@ -808,11 +808,6 @@
             }
           }
         ],
-        "x-ms-examples": {
-          "Create or update firewall rule": {
-            "$ref": "./examples/2026-01-20-preview/FirewallRules_CreateOrUpdate.json"
-          }
-        },
         "responses": {
           "200": {
             "description": "Resource 'HorizonDbFirewallRule' update operation succeeded",
@@ -842,6 +837,11 @@
             "schema": {
               "$ref": "../../../../../common-types/resource-management/v6/types.json#/definitions/ErrorResponse"
             }
+          }
+        },
+        "x-ms-examples": {
+          "Create or update a HorizonDb firewall rule": {
+            "$ref": "./examples/FirewallRules_CreateOrUpdate.json"
           }
         },
         "x-ms-long-running-operation-options": {
@@ -897,11 +897,6 @@
             "pattern": "^[a-zA-Z0-9][-a-zA-Z0-9]*[a-zA-Z0-9]$"
           }
         ],
-        "x-ms-examples": {
-          "Delete firewall rule": {
-            "$ref": "./examples/2026-01-20-preview/FirewallRules_Delete.json"
-          }
-        },
         "responses": {
           "202": {
             "description": "Resource deletion accepted.",
@@ -925,6 +920,11 @@
             "schema": {
               "$ref": "../../../../../common-types/resource-management/v6/types.json#/definitions/ErrorResponse"
             }
+          }
+        },
+        "x-ms-examples": {
+          "Delete a HorizonDb firewall rule": {
+            "$ref": "./examples/FirewallRules_Delete.json"
           }
         },
         "x-ms-long-running-operation-options": {
@@ -981,11 +981,6 @@
             "pattern": "^[a-zA-Z0-9][-a-zA-Z0-9]*[a-zA-Z0-9]$"
           }
         ],
-        "x-ms-examples": {
-          "Get replica": {
-            "$ref": "./examples/2026-01-20-preview/Replicas_Get.json"
-          }
-        },
         "responses": {
           "200": {
             "description": "Azure operation completed successfully.",
@@ -998,6 +993,11 @@
             "schema": {
               "$ref": "../../../../../common-types/resource-management/v6/types.json#/definitions/ErrorResponse"
             }
+          }
+        },
+        "x-ms-examples": {
+          "Get a HorizonDb replica": {
+            "$ref": "./examples/Replicas_Get.json"
           }
         }
       },
@@ -1057,11 +1057,6 @@
             }
           }
         ],
-        "x-ms-examples": {
-          "Create or update replica": {
-            "$ref": "./examples/2026-01-20-preview/Replicas_CreateOrUpdate.json"
-          }
-        },
         "responses": {
           "200": {
             "description": "Resource 'HorizonDbReplica' update operation succeeded",
@@ -1091,6 +1086,11 @@
             "schema": {
               "$ref": "../../../../../common-types/resource-management/v6/types.json#/definitions/ErrorResponse"
             }
+          }
+        },
+        "x-ms-examples": {
+          "Create or update a HorizonDb replica": {
+            "$ref": "./examples/Replicas_CreateOrUpdate.json"
           }
         },
         "x-ms-long-running-operation-options": {
@@ -1146,11 +1146,6 @@
             "pattern": "^[a-zA-Z0-9][-a-zA-Z0-9]*[a-zA-Z0-9]$"
           }
         ],
-        "x-ms-examples": {
-          "Delete replica": {
-            "$ref": "./examples/2026-01-20-preview/Replicas_Delete.json"
-          }
-        },
         "responses": {
           "202": {
             "description": "Resource deletion accepted.",
@@ -1174,6 +1169,11 @@
             "schema": {
               "$ref": "../../../../../common-types/resource-management/v6/types.json#/definitions/ErrorResponse"
             }
+          }
+        },
+        "x-ms-examples": {
+          "Delete a HorizonDb replica": {
+            "$ref": "./examples/Replicas_Delete.json"
           }
         },
         "x-ms-long-running-operation-options": {

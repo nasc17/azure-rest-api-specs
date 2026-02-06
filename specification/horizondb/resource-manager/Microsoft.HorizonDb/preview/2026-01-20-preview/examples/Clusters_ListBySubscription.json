@@ -1,0 +1,52 @@
+{
+  "operationId": "HorizonDbClusters_ListBySubscription",
+  "title": "List HorizonDb clusters by subscription",
+  "parameters": {
+    "subscriptionId": "ffffffff-ffff-ffff-ffff-ffffffffffff",
+    "api-version": "2026-01-20-preview"
+  },
+  "responses": {
+    "200": {
+      "body": {
+        "value": [
+          {
+            "id": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/rg1/providers/Microsoft.HorizonDb/clusters/cluster1",
+            "name": "cluster1",
+            "type": "Microsoft.HorizonDb/clusters",
+            "location": "canadacentral",
+            "tags": {
+              "environment": "production"
+            },
+            "properties": {
+              "administratorLogin": "dbadmin",
+              "version": "17",
+              "vCores": 4,
+              "replicaCount": 2,
+              "state": "Ready",
+              "fullyQualifiedDomainName": "cluster1.horizon.database.azure.com",
+              "provisioningState": "Succeeded"
+            }
+          },
+          {
+            "id": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/rg2/providers/Microsoft.HorizonDb/clusters/cluster2",
+            "name": "cluster2",
+            "type": "Microsoft.HorizonDb/clusters",
+            "location": "westus2",
+            "tags": {
+              "environment": "development"
+            },
+            "properties": {
+              "administratorLogin": "admin",
+              "version": "17",
+              "vCores": 2,
+              "replicaCount": 1,
+              "state": "Ready",
+              "fullyQualifiedDomainName": "cluster2.horizon.database.azure.com",
+              "provisioningState": "Succeeded"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

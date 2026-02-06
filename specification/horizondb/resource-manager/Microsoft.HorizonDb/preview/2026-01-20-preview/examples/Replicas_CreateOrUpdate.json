@@ -1,0 +1,57 @@
+{
+  "operationId": "HorizonDbReplicas_CreateOrUpdate",
+  "title": "Create or update a HorizonDb replica",
+  "parameters": {
+    "subscriptionId": "ffffffff-ffff-ffff-ffff-ffffffffffff",
+    "resourceGroupName": "myResourceGroup",
+    "clusterName": "myHorizonCluster",
+    "poolName": "myPool",
+    "replicaName": "myReplica",
+    "api-version": "2026-01-20-preview",
+    "properties": {}
+  },
+  "responses": {
+    "200": {
+      "body": {
+        "id": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/myResourceGroup/providers/Microsoft.HorizonDb/clusters/myHorizonCluster/pools/myPool/replicas/myReplica",
+        "name": "myReplica",
+        "type": "Microsoft.HorizonDb/clusters/pools/replicas",
+        "properties": {
+          "replicaName": "myReplica",
+          "isPrimary": false,
+          "role": "Read",
+          "status": "Ready",
+          "fullyQualifiedDomainName": "myReplica.horizon.database.azure.com",
+          "provisioningState": "Succeeded"
+        },
+        "systemData": {
+          "createdBy": "user@example.com",
+          "createdByType": "User",
+          "createdAt": "2026-01-20T10:00:00.000Z",
+          "lastModifiedBy": "user@example.com",
+          "lastModifiedByType": "User",
+          "lastModifiedAt": "2026-01-20T10:00:00.000Z"
+        }
+      }
+    },
+    "201": {
+      "body": {
+        "id": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/myResourceGroup/providers/Microsoft.HorizonDb/clusters/myHorizonCluster/pools/myPool/replicas/myReplica",
+        "name": "myReplica",
+        "type": "Microsoft.HorizonDb/clusters/pools/replicas",
+        "properties": {
+          "replicaName": "myReplica",
+          "isPrimary": false,
+          "role": "Read",
+          "status": "Starting",
+          "provisioningState": "InProgress"
+        },
+        "systemData": {
+          "createdBy": "user@example.com",
+          "createdByType": "User",
+          "createdAt": "2026-01-20T10:00:00.000Z"
+        }
+      }
+    }
+  }
+}
