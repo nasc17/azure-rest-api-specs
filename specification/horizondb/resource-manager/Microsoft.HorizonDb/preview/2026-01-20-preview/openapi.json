@@ -68,6 +68,11 @@
             "$ref": "../../../../../common-types/resource-management/v6/types.json#/parameters/ApiVersionParameter"
           }
         ],
+        "x-ms-examples": {
+          "List operations": {
+            "$ref": "./examples/2026-01-20-preview/Operations_List.json"
+          }
+        },
         "responses": {
           "200": {
             "description": "Azure operation completed successfully.",
@@ -102,6 +107,11 @@
             "$ref": "../../../../../common-types/resource-management/v6/types.json#/parameters/SubscriptionIdParameter"
           }
         ],
+        "x-ms-examples": {
+          "List clusters by subscription": {
+            "$ref": "./examples/2026-01-20-preview/Clusters_ListBySubscription.json"
+          }
+        },
         "responses": {
           "200": {
             "description": "Azure operation completed successfully.",
@@ -139,6 +149,11 @@
             "$ref": "../../../../../common-types/resource-management/v6/types.json#/parameters/ResourceGroupNameParameter"
           }
         ],
+        "x-ms-examples": {
+          "List clusters by resource group": {
+            "$ref": "./examples/2026-01-20-preview/Clusters_ListByResourceGroup.json"
+          }
+        },
         "responses": {
           "200": {
             "description": "Azure operation completed successfully.",
@@ -186,6 +201,11 @@
             "pattern": "^[a-zA-Z0-9][-a-zA-Z0-9]*[a-zA-Z0-9]$"
           }
         ],
+        "x-ms-examples": {
+          "Get cluster": {
+            "$ref": "./examples/2026-01-20-preview/Clusters_Get.json"
+          }
+        },
         "responses": {
           "200": {
             "description": "Azure operation completed successfully.",
@@ -237,6 +257,11 @@
             }
           }
         ],
+        "x-ms-examples": {
+          "Create cluster": {
+            "$ref": "./examples/2026-01-20-preview/Clusters_CreateOrUpdate.json"
+          }
+        },
         "responses": {
           "200": {
             "description": "Resource 'HorizonDbCluster' update operation succeeded",
@@ -310,6 +335,11 @@
             }
           }
         ],
+        "x-ms-examples": {
+          "Update cluster": {
+            "$ref": "./examples/2026-01-20-preview/Clusters_Update.json"
+          }
+        },
         "responses": {
           "200": {
             "description": "Azure operation completed successfully.",
@@ -371,6 +401,11 @@
             "pattern": "^[a-zA-Z0-9][-a-zA-Z0-9]*[a-zA-Z0-9]$"
           }
         ],
+        "x-ms-examples": {
+          "Delete cluster": {
+            "$ref": "./examples/2026-01-20-preview/Clusters_Delete.json"
+          }
+        },
         "responses": {
           "202": {
             "description": "Resource deletion accepted.",
@@ -449,6 +484,11 @@
             }
           }
         ],
+        "x-ms-examples": {
+          "Create or update pool": {
+            "$ref": "./examples/2026-01-20-preview/Pools_CreateOrUpdate.json"
+          }
+        },
         "responses": {
           "200": {
             "description": "Resource 'HorizonDbPool' update operation succeeded",
@@ -532,6 +572,11 @@
             }
           }
         ],
+        "x-ms-examples": {
+          "Update pool": {
+            "$ref": "./examples/2026-01-20-preview/Pools_Update.json"
+          }
+        },
         "responses": {
           "200": {
             "description": "Azure operation completed successfully.",
@@ -603,6 +648,11 @@
             "pattern": "^[a-zA-Z0-9][-a-zA-Z0-9]*[a-zA-Z0-9]$"
           }
         ],
+        "x-ms-examples": {
+          "Delete pool": {
+            "$ref": "./examples/2026-01-20-preview/Pools_Delete.json"
+          }
+        },
         "responses": {
           "202": {
             "description": "Resource deletion accepted.",
@@ -682,6 +732,11 @@
             "pattern": "^[a-zA-Z0-9][-a-zA-Z0-9]*[a-zA-Z0-9]$"
           }
         ],
+        "x-ms-examples": {
+          "Get firewall rule": {
+            "$ref": "./examples/2026-01-20-preview/FirewallRules_Get.json"
+          }
+        },
         "responses": {
           "200": {
             "description": "Azure operation completed successfully.",
@@ -753,6 +808,11 @@
             }
           }
         ],
+        "x-ms-examples": {
+          "Create or update firewall rule": {
+            "$ref": "./examples/2026-01-20-preview/FirewallRules_CreateOrUpdate.json"
+          }
+        },
         "responses": {
           "200": {
             "description": "Resource 'HorizonDbFirewallRule' update operation succeeded",
@@ -837,6 +897,11 @@
             "pattern": "^[a-zA-Z0-9][-a-zA-Z0-9]*[a-zA-Z0-9]$"
           }
         ],
+        "x-ms-examples": {
+          "Delete firewall rule": {
+            "$ref": "./examples/2026-01-20-preview/FirewallRules_Delete.json"
+          }
+        },
         "responses": {
           "202": {
             "description": "Resource deletion accepted.",
@@ -916,6 +981,11 @@
             "pattern": "^[a-zA-Z0-9][-a-zA-Z0-9]*[a-zA-Z0-9]$"
           }
         ],
+        "x-ms-examples": {
+          "Get replica": {
+            "$ref": "./examples/2026-01-20-preview/Replicas_Get.json"
+          }
+        },
         "responses": {
           "200": {
             "description": "Azure operation completed successfully.",
@@ -987,6 +1057,11 @@
             }
           }
         ],
+        "x-ms-examples": {
+          "Create or update replica": {
+            "$ref": "./examples/2026-01-20-preview/Replicas_CreateOrUpdate.json"
+          }
+        },
         "responses": {
           "200": {
             "description": "Resource 'HorizonDbReplica' update operation succeeded",
@@ -1071,6 +1146,11 @@
             "pattern": "^[a-zA-Z0-9][-a-zA-Z0-9]*[a-zA-Z0-9]$"
           }
         ],
+        "x-ms-examples": {
+          "Delete replica": {
+            "$ref": "./examples/2026-01-20-preview/Replicas_Delete.json"
+          }
+        },
         "responses": {
           "202": {
             "description": "Resource deletion accepted.",
