@@ -357,25 +357,25 @@ model HorizonDbReplicaProperties {
   /**
    * Boolean indicating if this is the primary replica
    */
-  @visibility(Lifecycle.Read)
+  @visibility(Lifecycle.Read, Lifecycle.Create, Lifecycle.Update)
   isPrimary?: boolean;
 
   /**
    * Role of the replica
    */
-  @visibility(Lifecycle.Read)
+  @visibility(Lifecycle.Read, Lifecycle.Create, Lifecycle.Update)
   role?: ReplicaRole;
 
   /**
    * Current status of the replica
    */
-  @visibility(Lifecycle.Read)
+  @visibility(Lifecycle.Read, Lifecycle.Create, Lifecycle.Update)
   status?: State;
 
   /**
    * The fully qualified domain name of the replica
    */
-  @visibility(Lifecycle.Read)
+  @visibility(Lifecycle.Read, Lifecycle.Create, Lifecycle.Update)
   fullyQualifiedDomainName?: string;
 
   /**

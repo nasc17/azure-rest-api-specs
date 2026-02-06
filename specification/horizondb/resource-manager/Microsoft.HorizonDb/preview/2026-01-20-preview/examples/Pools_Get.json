@@ -1,15 +1,12 @@
 {
-  "operationId": "HorizonDbPools_Update",
-  "title": "Update a HorizonDb pool",
+  "operationId": "HorizonDbPools_Get",
+  "title": "Get a HorizonDb pool",
   "parameters": {
     "subscriptionId": "ffffffff-ffff-ffff-ffff-ffffffffffff",
     "resourceGroupName": "myResourceGroup",
     "clusterName": "myHorizonCluster",
     "poolName": "myPool",
-    "api-version": "2026-01-20-preview",
-    "properties": {
-      "replicaCount": 3
-    }
+    "api-version": "2026-01-20-preview"
   },
   "responses": {
     "200": {
@@ -21,7 +18,7 @@
           "sku": "Standard_D4s_v3",
           "location": "canadacentral",
           "state": "Ready",
-          "replicaCount": 3,
+          "replicaCount": 2,
           "administratorLogin": "pooladmin",
           "provisioningState": "Succeeded"
         },
@@ -31,13 +28,8 @@
           "createdAt": "2026-01-20T10:00:00.000Z",
           "lastModifiedBy": "user@example.com",
           "lastModifiedByType": "User",
-          "lastModifiedAt": "2026-01-20T15:30:00.000Z"
+          "lastModifiedAt": "2026-01-20T10:00:00.000Z"
         }
-      }
-    },
-    "202": {
-      "headers": {
-        "Location": "https://management.azure.com/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/providers/Microsoft.HorizonDb/locations/canadacentral/operationResults/ffffffff-ffff-ffff-ffff-ffffffffffff"
       }
     }
   }

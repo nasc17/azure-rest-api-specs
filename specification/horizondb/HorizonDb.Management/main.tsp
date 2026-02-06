@@ -69,7 +69,7 @@ model HorizonDbReplica
   @pattern("^[a-zA-Z0-9][-a-zA-Z0-9]*[a-zA-Z0-9]$")
   @minLength(1)
   @maxLength(63)
-  @key("replicaName")
+  @key("horizonDbReplicaName")
   @path
   @segment("replicas")
   name: string;
@@ -103,6 +103,12 @@ interface HorizonDbClusters {
 
 @armResourceOperations
 interface HorizonDbPools {
+  @doc("Gets information about a HorizonDb pool")
+  get is ArmResourceRead<HorizonDbPool>;
+
+  @doc("Lists all HorizonDb pools in a cluster")
+  list is ArmResourceListByParent<HorizonDbPool>;
+
   @doc("Creates a new HorizonDb pool or updates an existing pool")
   @Azure.Core.useFinalStateVia("azure-async-operation")
   createOrUpdate is ArmResourceCreateOrReplaceAsync<HorizonDbPool>;
@@ -120,6 +126,9 @@ interface HorizonDbReplicas {
   @doc("Gets information about a HorizonDb replica")
   get is ArmResourceRead<HorizonDbReplica>;
 
+  @doc("Lists all HorizonDb replicas in a pool")
+  list is ArmResourceListByParent<HorizonDbReplica>;
+
   @doc("Creates a new HorizonDb replica or updates an existing replica")
   @Azure.Core.useFinalStateVia("azure-async-operation")
   createOrUpdate is ArmResourceCreateOrReplaceAsync<HorizonDbReplica>;
@@ -132,6 +141,9 @@ interface HorizonDbReplicas {
 interface HorizonDbFirewallRules {
   @doc("Gets information about a HorizonDb firewall rule")
   get is ArmResourceRead<HorizonDbFirewallRule>;
+
+  @doc("Lists all HorizonDb firewall rules in a pool")
+  list is ArmResourceListByParent<HorizonDbFirewallRule>;
 
   @doc("Creates a new HorizonDb firewall rule or updates an existing rule")
   @Azure.Core.useFinalStateVia("azure-async-operation")

@@ -11,8 +11,7 @@
       "team": "updated-data-platform"
     },
     "properties": {
-      "vCores": 8,
-      "replicaCount": 3
+      "vCores": 8
     }
   },
   "responses": {
@@ -31,7 +30,7 @@
           "version": "17",
           "createMode": "Default",
           "vCores": 8,
-          "replicaCount": 3,
+          "replicaCount": 2,
           "availabilityZone": "1",
           "processorType": "Intel",
           "state": "Ready",

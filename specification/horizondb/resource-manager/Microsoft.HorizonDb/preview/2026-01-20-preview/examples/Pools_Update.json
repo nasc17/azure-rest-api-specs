@@ -8,7 +8,6 @@
     "poolName": "myPool",
     "api-version": "2026-01-20-preview",
     "properties": {
-      "sku": "Standard_D8s_v3",
       "replicaCount": 3
     }
   },
@@ -19,7 +18,7 @@
         "name": "myPool",
         "type": "Microsoft.HorizonDb/clusters/pools",
         "properties": {
-          "sku": "Standard_D8s_v3",
+          "sku": "Standard_D4s_v3",
           "location": "canadacentral",
           "state": "Ready",
           "replicaCount": 3,
