@@ -1,5 +1,5 @@
 {
-  "operationId": "Clusters_ListBySubscription",
+  "operationId": "HorizonDbClusters_ListBySubscription",
   "title": "List HorizonDb clusters by subscription",
   "parameters": {
     "subscriptionId": "ffffffff-ffff-ffff-ffff-ffffffffffff",

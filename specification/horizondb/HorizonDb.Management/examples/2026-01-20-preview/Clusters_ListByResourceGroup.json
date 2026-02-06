@@ -1,5 +1,5 @@
 {
-  "operationId": "Clusters_ListByResourceGroup",
+  "operationId": "HorizonDbClusters_ListByResourceGroup",
   "title": "List HorizonDb clusters in a resource group",
   "parameters": {
     "subscriptionId": "ffffffff-ffff-ffff-ffff-ffffffffffff",

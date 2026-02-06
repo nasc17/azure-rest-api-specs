@@ -1,5 +1,5 @@
 {
-  "operationId": "Replicas_Delete",
+  "operationId": "HorizonDbReplicas_Delete",
   "title": "Delete a HorizonDb replica",
   "parameters": {
     "subscriptionId": "ffffffff-ffff-ffff-ffff-ffffffffffff",

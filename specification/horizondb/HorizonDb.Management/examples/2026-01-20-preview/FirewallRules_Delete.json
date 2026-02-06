@@ -1,5 +1,5 @@
 {
-  "operationId": "FirewallRules_Delete",
+  "operationId": "HorizonDbFirewallRules_Delete",
   "title": "Delete a HorizonDb firewall rule",
   "parameters": {
     "subscriptionId": "ffffffff-ffff-ffff-ffff-ffffffffffff",

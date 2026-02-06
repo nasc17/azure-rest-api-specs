@@ -1,5 +1,5 @@
 {
-  "operationId": "FirewallRules_Get",
+  "operationId": "HorizonDbFirewallRules_Get",
   "title": "Get a HorizonDb firewall rule",
   "parameters": {
     "subscriptionId": "ffffffff-ffff-ffff-ffff-ffffffffffff",

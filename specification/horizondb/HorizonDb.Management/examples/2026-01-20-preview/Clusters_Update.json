@@ -1,5 +1,5 @@
 {
-  "operationId": "Clusters_Update",
+  "operationId": "HorizonDbClusters_Update",
   "title": "Update a HorizonDb cluster",
   "parameters": {
     "subscriptionId": "ffffffff-ffff-ffff-ffff-ffffffffffff",

@@ -1,5 +1,5 @@
 {
-  "operationId": "Replicas_Get",
+  "operationId": "HorizonDbReplicas_Get",
   "title": "Get a HorizonDb replica",
   "parameters": {
     "subscriptionId": "ffffffff-ffff-ffff-ffff-ffffffffffff",

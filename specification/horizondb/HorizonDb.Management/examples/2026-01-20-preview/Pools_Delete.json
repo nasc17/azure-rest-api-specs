@@ -1,5 +1,5 @@
 {
-  "operationId": "Pools_Delete",
+  "operationId": "HorizonDbPools_Delete",
   "title": "Delete a HorizonDb pool",
   "parameters": {
     "subscriptionId": "ffffffff-ffff-ffff-ffff-ffffffffffff",

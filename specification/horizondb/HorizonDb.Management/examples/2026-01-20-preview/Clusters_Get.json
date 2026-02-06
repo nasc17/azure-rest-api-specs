@@ -1,5 +1,5 @@
 {
-  "operationId": "Clusters_Get",
+  "operationId": "HorizonDbClusters_Get",
   "title": "Get a HorizonDb cluster",
   "parameters": {
     "subscriptionId": "ffffffff-ffff-ffff-ffff-ffffffffffff",

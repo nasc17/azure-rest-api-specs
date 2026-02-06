@@ -1,5 +1,5 @@
 {
-  "operationId": "Pools_Update",
+  "operationId": "HorizonDbPools_Update",
   "title": "Update a HorizonDb pool",
   "parameters": {
     "subscriptionId": "ffffffff-ffff-ffff-ffff-ffffffffffff",

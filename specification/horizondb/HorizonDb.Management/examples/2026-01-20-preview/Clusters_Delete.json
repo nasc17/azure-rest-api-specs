@@ -1,5 +1,5 @@
 {
-  "operationId": "Clusters_Delete",
+  "operationId": "HorizonDbClusters_Delete",
   "title": "Delete a HorizonDb cluster",
   "parameters": {
     "subscriptionId": "ffffffff-ffff-ffff-ffff-ffffffffffff",
