@@ -59,6 +59,7 @@ model HorizonDbClusterProperties {
    */
   @minValue(0)
   @maxValue(20)
+  @visibility(Lifecycle.Create, Lifecycle.Update, Lifecycle.Read)
   replicaCount?: int32;
 
   /**
@@ -66,6 +67,7 @@ model HorizonDbClusterProperties {
    */
   @minValue(1)
   @maxValue(96)
+  @visibility(Lifecycle.Create, Lifecycle.Update, Lifecycle.Read)
   vCores?: int32;
 
   /**
@@ -182,12 +184,13 @@ model HorizonDbPoolProperties {
   /**
    * Number of replicas in the pool
    */
+  @visibility(Lifecycle.Create, Lifecycle.Update, Lifecycle.Read)
   replicaCount?: int32;
 
   /**
    * The administrator login for the pool
    */
-  @visibility(Lifecycle.Create)
+  @visibility(Lifecycle.Create, Lifecycle.Read)
   administratorLogin?: string;
 
   /**

@@ -4,9 +4,9 @@ This directory contains the TypeSpec specification for the Microsoft HorizonDb M
 
 ## Basic Information
 
-These are the global settings for the HorisonDb API.
+These are the global settings for the HorizonDb API.
 
-```yaml
+``` yaml
 title: HorizonDbManagementClient
 description: The Microsoft HorizonDb Management API provides Azure Resource Manager operations for managing HorizonDb clusters, pools, replicas, and firewall rules.
 openapi-type: arm
@@ -17,7 +17,7 @@ tag: package-horizondb-2026-01-20-preview
 
 These settings apply only when `--tag=package-horizondb-2026-01-20-preview` is specified on the command line.
 
-````yaml $(tag) == 'package-flexibleserver-2025-08-01'
+``` yaml $(tag) == 'package-horizondb-2026-01-20-preview'
 input-file:
   - Microsoft.HorizonDb/preview/2026-01-20-preview/openapi.json
 
@@ -25,7 +25,7 @@ input-file:
 
 To compile the TypeSpec specification:
 
-```bash
+``` bash
 cd specification/horizondb/HorizonDb.Management
 npx tsp compile .
 ```

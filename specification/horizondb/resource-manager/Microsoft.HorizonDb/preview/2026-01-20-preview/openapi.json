@@ -1406,14 +1406,24 @@
           "format": "int32",
           "description": "Number of replicas",
           "minimum": 0,
-          "maximum": 20
+          "maximum": 20,
+          "x-ms-mutability": [
+            "read",
+            "update",
+            "create"
+          ]
         },
         "vCores": {
           "type": "integer",
           "format": "int32",
           "description": "Number of vCores",
           "minimum": 1,
-          "maximum": 96
+          "maximum": 96,
+          "x-ms-mutability": [
+            "read",
+            "update",
+            "create"
+          ]
         },
         "availabilityZone": {
           "type": "string",
@@ -1594,12 +1604,18 @@
         "replicaCount": {
           "type": "integer",
           "format": "int32",
-          "description": "Number of replicas in the pool"
+          "description": "Number of replicas in the pool",
+          "x-ms-mutability": [
+            "read",
+            "update",
+            "create"
+          ]
         },
         "administratorLogin": {
           "type": "string",
           "description": "The administrator login for the pool",
           "x-ms-mutability": [
+            "read",
             "create"
           ]
         },
