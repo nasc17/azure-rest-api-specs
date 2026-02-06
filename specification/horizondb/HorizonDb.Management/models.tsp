@@ -17,6 +17,7 @@ model HorizonDbClusterProperties {
    */
   @minLength(1)
   @maxLength(63)
+  @visibility(Lifecycle.Create, Lifecycle.Read)
   administratorLogin: string;
 
   /**
@@ -181,7 +182,6 @@ model HorizonDbPoolProperties {
   /**
    * Number of replicas in the pool
    */
-  @visibility(Lifecycle.Update)
   replicaCount?: int32;
 
   /**

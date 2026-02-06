@@ -10,7 +10,6 @@
     "api-version": "2026-01-20-preview"
   },
   "responses": {
-    "200": {},
     "202": {
       "headers": {
         "Location": "https://management.azure.com/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/providers/Microsoft.HorizonDb/locations/canadacentral/operationResults/ffffffff-ffff-ffff-ffff-ffffffffffff"

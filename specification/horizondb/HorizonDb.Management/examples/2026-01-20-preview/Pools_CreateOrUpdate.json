@@ -7,12 +7,14 @@
     "clusterName": "myHorizonCluster",
     "poolName": "myPool",
     "api-version": "2026-01-20-preview",
-    "properties": {
-      "sku": "Standard_D4s_v3",
-      "location": "canadacentral",
-      "replicaCount": 2,
-      "administratorLogin": "pooladmin",
-      "administratorLoginPassword": "examplepassword"
+    "resource": {
+      "properties": {
+        "sku": "Standard_D4s_v3",
+        "location": "canadacentral",
+        "replicaCount": 2,
+        "administratorLogin": "pooladmin",
+        "administratorLoginPassword": "examplepassword"
+      }
     }
   },
   "responses": {

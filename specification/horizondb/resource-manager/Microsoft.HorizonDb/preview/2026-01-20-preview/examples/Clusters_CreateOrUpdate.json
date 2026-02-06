@@ -6,26 +6,28 @@
     "resourceGroupName": "myResourceGroup",
     "clusterName": "myHorizonCluster",
     "api-version": "2026-01-20-preview",
-    "location": "canadacentral",
-    "tags": {
-      "environment": "production",
-      "team": "data-platform"
-    },
-    "properties": {
-      "administratorLogin": "dbadmin",
-      "administratorLoginPassword": "examplepassword",
-      "version": "17",
-      "createMode": "Create",
-      "vCores": 4,
-      "replicaCount": 2,
-      "availabilityZone": "1",
-      "processorType": "Intel",
-      "network": {
-        "delegatedSubnetResourceId": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet",
-        "privateDnsZoneArmResourceId": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/myResourceGroup/providers/Microsoft.Network/privateDnsZones/horizondb.private.postgres.database.azure.com"
+    "resource": {
+      "location": "canadacentral",
+      "tags": {
+        "environment": "production",
+        "team": "data-platform"
       },
-      "highAvailability": {
-        "mode": "ZoneRedundant"
+      "properties": {
+        "administratorLogin": "dbadmin",
+        "administratorLoginPassword": "examplepassword",
+        "version": "17",
+        "createMode": "Create",
+        "vCores": 4,
+        "replicaCount": 2,
+        "availabilityZone": "1",
+        "processorType": "Intel",
+        "network": {
+          "delegatedSubnetResourceId": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVnet/subnets/mySubnet",
+          "privateDnsZoneArmResourceId": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/myResourceGroup/providers/Microsoft.Network/privateDnsZones/horizondb.private.postgres.database.azure.com"
+        },
+        "highAvailability": {
+          "mode": "ZoneRedundant"
+        }
       }
     }
   },

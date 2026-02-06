@@ -19,27 +19,7 @@ These settings apply only when `--tag=package-horizondb-2026-01-20-preview` is s
 
 ````yaml $(tag) == 'package-flexibleserver-2025-08-01'
 input-file:
-  - Microsoft.DBforPostgreSQL/stable/2025-08-01/openapi.json
-
-## File Structure
-
-``` yaml
-specification/horizondb/
-├── readme.md                           # This file
-├── resource-manager/
-│   └── Microsoft.HorizonDb/
-│       └── preview/
-│           └── 2026-01-20-preview/     # Generated OpenAPI specifications
-└── HorizonDb.Management/               # TypeSpec source files
-    ├── main.tsp                        # Main TypeSpec file with resource definitions
-    ├── models.tsp                      # Data models and property definitions
-    ├── routes.tsp                      # ARM resource operation interfaces
-    ├── tspconfig.yaml                  # TypeSpec compiler configuration
-    ├── examples/                       # API operation examples
-    │   └── 2026-01-20-preview/         # Examples for the current API version
-    ├── preview/                        # Generated OpenAPI output (local)
-        └── 2026-01-20-preview/
-````
+  - Microsoft.HorizonDb/preview/2026-01-20-preview/openapi.json
 
 ## Compilation
 

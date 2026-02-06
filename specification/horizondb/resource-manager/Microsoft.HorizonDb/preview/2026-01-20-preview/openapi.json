@@ -1366,7 +1366,11 @@
           "type": "string",
           "description": "The administrator login name",
           "minLength": 1,
-          "maxLength": 63
+          "maxLength": 63,
+          "x-ms-mutability": [
+            "read",
+            "create"
+          ]
         },
         "administratorLoginPassword": {
           "type": "string",
@@ -1590,10 +1594,7 @@
         "replicaCount": {
           "type": "integer",
           "format": "int32",
-          "description": "Number of replicas in the pool",
-          "x-ms-mutability": [
-            "update"
-          ]
+          "description": "Number of replicas in the pool"
         },
         "administratorLogin": {
           "type": "string",
