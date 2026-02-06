@@ -20,7 +20,7 @@
             },
             "properties": {
               "administratorLogin": "dbadmin",
-              "version": "1.0",
+              "version": "17",
               "vCores": 4,
               "replicaCount": 2,
               "state": "Ready",
@@ -32,13 +32,13 @@
             "id": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/myResourceGroup/providers/Microsoft.HorizonDb/clusters/myHorizonCluster2",
             "name": "myHorizonCluster2",
             "type": "Microsoft.HorizonDb/clusters",
-            "location": "West US 2",
+            "location": "westus2",
             "tags": {
               "environment": "development"
             },
             "properties": {
               "administratorLogin": "admin",
-              "version": "1.0",
+              "version": "17",
               "vCores": 2,
               "replicaCount": 1,
               "state": "Ready",
