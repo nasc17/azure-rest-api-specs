@@ -6447,6 +6447,13 @@
             "type": "string"
           }
         },
+        "supportedTimeGrainTypes": {
+          "type": "array",
+          "description": "Supported time grain types for the metric.",
+          "items": {
+            "type": "string"
+          }
+        },
         "category": {
           "type": "string",
           "description": "Category of the metric."

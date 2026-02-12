@@ -2468,6 +2468,11 @@ model MetricSpecification {
   supportedAggregationTypes?: string[];
 
   /**
+   * Supported time grain types for the metric.
+   */
+  supportedTimeGrainTypes?: string[];
+
+  /**
    * Category of the metric.
    */
   category?: string;
