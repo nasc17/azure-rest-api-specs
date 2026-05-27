@@ -1870,6 +1870,18 @@ model BackupSettings {
   backupName: string;
 }
 
+@doc("Indicates if immutable backup is enabled or disabled for the server.")
+@added(Versions.v2026_07_01)
+union ImmutableBackup {
+  string,
+
+  @doc("Immutable backup is enabled for the server.")
+  Enabled: "Enabled",
+
+  @doc("Immutable backup is disabled for the server.")
+  Disabled: "Disabled",
+}
+
 /**
  * Response for the LTR pre-backup API call.
  */
@@ -3182,6 +3194,11 @@ model Backup {
   @visibility(Lifecycle.Read)
   // FIXME: (utcDateTime) Please double check that this is the correct type for your scenario.
   earliestRestoreDate?: utcDateTime;
+
+  @visibility(Lifecycle.Read, Lifecycle.Create)
+  @doc("Indicates if immutable backup is enabled or disabled for the server.")
+  @added(Versions.v2026_07_01)
+  immutableBackup?: ImmutableBackup = ImmutableBackup.Disabled;
 }
 
 /**

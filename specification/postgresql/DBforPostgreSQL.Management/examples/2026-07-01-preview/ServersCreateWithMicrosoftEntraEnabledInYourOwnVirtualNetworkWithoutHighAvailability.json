@@ -14,7 +14,8 @@
         "availabilityZone": "1",
         "backup": {
           "backupRetentionDays": 7,
-          "geoRedundantBackup": "Disabled"
+          "geoRedundantBackup": "Disabled",
+          "immutableBackup": "Disabled"
         },
         "createMode": "Create",
         "dataEncryption": {

@@ -8,7 +8,8 @@
         "administratorLoginPassword": "examplepassword",
         "backup": {
           "backupRetentionDays": 7,
-          "geoRedundantBackup": "Disabled"
+          "geoRedundantBackup": "Disabled",
+          "immutableBackup": "Disabled"
         },
         "cluster": {
           "clusterSize": 2,
