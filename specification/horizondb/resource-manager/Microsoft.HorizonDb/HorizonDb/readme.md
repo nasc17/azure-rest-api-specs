@@ -38,62 +38,91 @@ These settings apply only when `--tag=package-horizondb-2026-10-01-preview` is s
 ```yaml $(tag) == 'package-horizondb-2026-10-01-preview'
 input-file:
   - preview/2026-10-01-preview/openapi.json
-suppressions:
-  - code: EvenSegmentedPathForPutOperation
+directive:
+  - suppress: EvenSegmentedPathForPutOperation
     from: openapi.json
     where: $.paths["/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HorizonDb/clusters/{clusterName}/authentications/passwordMethod"]
     reason: >-
       PasswordAuthentication is a service-created singleton resource with the
       fixed name passwordMethod. Its path follows the approved singleton
       resource pattern and cannot end in a variable resource-name segment.
-  - code: PutRequestResponseSchemeArm
+  - suppress: EvenSegmentedPathForPutOperation
+    from: openapi.json
+    where: $.paths["/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HorizonDb/clusters/{clusterName}/authentications/microsoftEntra"]
+    reason: >-
+      MicrosoftEntraAuthentication is a service-created singleton resource with
+      the fixed name microsoftEntra. Its path follows the approved singleton
+      resource pattern and cannot end in a variable resource-name segment.
+  - suppress: PutRequestResponseSchemeArm
     from: openapi.json
     where: $.paths["/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HorizonDb/clusters/{clusterName}/microsoftEntraAdministrators/{objectId}"].put
     reason: >-
       The create request uses MicrosoftEntraAdministratorAdd and omits
       response-only fields such as objectId and provisioningState. The request
       is a subset of the resource returned by GET and PUT, not a superset.
-  - code: AllProxyResourcesShouldHaveDelete
+  - suppress: AllProxyResourcesShouldHaveDelete
     from: openapi.json
     where: $.definitions["PasswordAuthentication"]
     reason: >-
       PasswordAuthentication is created and owned by the service with the
       parent cluster. Customers can configure the singleton but cannot delete
       it independently.
-  - code: PathForNestedResource
+  - suppress: AllProxyResourcesShouldHaveDelete
+    from: openapi.json
+    where: $.definitions["MicrosoftEntraAuthentication"]
+    reason: >-
+      MicrosoftEntraAuthentication is created and owned by the service with the
+      parent cluster. Customers enable or disable the singleton through PUT or
+      PATCH but cannot delete it independently.
+  - suppress: PathForNestedResource
     from: openapi.json
     where: $.paths["/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HorizonDb/clusters/{clusterName}/authentications/microsoftEntra"]
     reason: >-
       The Microsoft Entra authentication method is a service-created singleton
       resource with the fixed name microsoftEntra under the authentications
       collection. Customers cannot create additional instances.
-  - code: PathForNestedResource
+  - suppress: PathForNestedResource
     from: openapi.json
     where: $.paths["/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HorizonDb/clusters/{clusterName}/authentications/passwordMethod"]
     reason: >-
       The password authentication method is a service-created singleton resource
       with the fixed name passwordMethod under the authentications collection.
       Customers cannot create additional instances.
-  - code: ConsistentPatchProperties
+  - suppress: ConsistentPatchProperties
     from: openapi.json
     where: $.paths["/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HorizonDb/clusters/{clusterName}/pools/{poolName}"].patch.parameters[5].schema
     reason: >-
       The PATCH model exposes computeModel.vCores for the Provisioned compute
       subtype. The validator compares it against the base compute model and does
       not resolve the resource model's discriminated subtype hierarchy.
-  - code: RequiredPropertiesMissingInResourceModel
+  - suppress: RequiredPropertiesMissingInResourceModel
     from: openapi.json
     where: $.definitions["PagedParameterGroupConnectionProperties"]
     reason: >-
       PagedParameterGroupConnectionProperties is a paged response envelope
       containing value and nextLink, not an ARM resource model.
-  - code: PutInOperationName
+  - suppress: PutInOperationName
     from: openapi.json
-    where: $.paths["/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HorizonDb/clusters/{clusterName}/privateEndpointConnections/{privateEndpointConnectionName}"].put
+    where: $.paths["/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HorizonDb/clusters/{clusterName}/privateEndpointConnections/{privateEndpointConnectionName}"].put.operationId
     reason: >-
       This PUT approves or rejects an existing private endpoint connection; it
       does not create the connection. The approval-specific operation ID
       PrivateEndpointConnections_ApproveOrReject describes the service behavior.
+  - suppress: EnumInsteadOfBoolean
+    from: openapi.json
+    where:
+      - $.definitions.ActivateChangeDataCaptureIdentityRequest.properties.drainExistingSessions
+      - $.definitions.ChangeDataCaptureCapabilityProperties.properties.autoUpgradeExtension
+      - $.definitions.ChangeDataCaptureCapabilityPropertiesForPatchUpdate.properties.autoUpgradeExtension
+      - $.definitions.LogFileProperties.properties.isMutable
+      - $.definitions.MaintenanceEventActionResponse.properties.appliedNow
+      - $.definitions.MaintenanceEventProperties.properties.deferrable
+    reason: >-
+      These properties represent intrinsically binary choices or observations:
+      drain-or-do-not-drain, automatic-upgrade permission, file mutability,
+      apply-now versus reschedule, and maintenance deferrability. Boolean values
+      are the clearest wire representation and changing them to string enums
+      would unnecessarily change the existing 2026-10-01-preview contract.
 ```
 
 ### Tag: package-horizondb-2026-05-01-preview
