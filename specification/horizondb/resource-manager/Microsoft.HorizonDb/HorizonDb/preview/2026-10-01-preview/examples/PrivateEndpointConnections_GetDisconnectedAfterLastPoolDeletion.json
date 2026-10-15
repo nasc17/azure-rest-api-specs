@@ -22,7 +22,7 @@
             "id": "/subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/network-resource-group/providers/Microsoft.Network/privateEndpoints/example-private-endpoint"
           },
           "privateLinkServiceConnectionState": {
-            "status": "Rejected",
+            "status": "Disconnected",
             "description": "Disconnected because the last pool in the cluster was deleted.",
             "actionsRequired": "Create a pool before requesting approval again."
           },
