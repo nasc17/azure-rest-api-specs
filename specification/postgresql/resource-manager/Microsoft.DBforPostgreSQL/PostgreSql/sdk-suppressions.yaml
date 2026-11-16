@@ -1,0 +1,41 @@
+suppressions:
+  azure-sdk-for-python:
+    - package: azure-mgmt-postgresqlflexibleservers
+      breaking-changes:
+        - Deleted or renamed client operation group `PostgreSQLManagementClient.maintenance_events`
+        - Deleted or renamed client operation group `PostgreSQLManagementClient.major_version_upgrade_precheck`
+        - Deleted or renamed enum value `RecommendationTypeEnum.VACUUM_TABLE`
+        - Deleted or renamed enum value `RecommendationTypeParameterEnum.VACUUM_TABLE`
+        - Deleted or renamed method `ServersOperations.begin_migrate_network_mode`
+        - Deleted or renamed method `ServersOperations.begin_start_major_version_upgrade_precheck`
+        - Deleted or renamed model `FipsMode`
+        - Deleted or renamed model `ImmutableBackup`
+        - Deleted or renamed model `MaintenanceEventActionResponse`
+        - Deleted or renamed model `MaintenanceEventRescheduleRequest`
+        - Deleted or renamed model `MaintenanceEventResourceProperties`
+        - Deleted or renamed model `MaintenanceEventResource`
+        - Deleted or renamed model `MaintenanceEventStatusFilter`
+        - Deleted or renamed model `MaintenanceEventStatus`
+        - Deleted or renamed model `MaintenanceEventsOperations`
+        - Deleted or renamed model `MaintenanceType`
+        - Deleted or renamed model `MajorVersionUpgradePrecheckOperations`
+        - Deleted or renamed model `MajorVersionUpgradePrecheckResourceProperties`
+        - Deleted or renamed model `MajorVersionUpgradePrecheckResource`
+        - Deleted or renamed model `MajorVersionUpgradePrecheckStatus`
+        - Deleted or renamed model `MigrateNetworkStatus`
+        - Deleted or renamed model `NetworkMigrationState`
+        - Deleted or renamed model `PolicyDetail`
+        - Deleted or renamed model `PrecheckErrorInfo`
+        - Deleted or renamed model `PrecheckResult`
+        - Deleted or renamed model `StartMajorVersionUpgradePrecheckRequest`
+        - Deleted or renamed model `StartMajorVersionUpgradePrecheckResponse`
+        - Deleted or renamed model `UpgradeSequence`
+        - Model `BackupForPatch` deleted or renamed its instance variable `immutable_backup`
+        - Model `Backup` deleted or renamed its instance variable `immutable_backup`
+        - Model `DataEncryption` deleted or renamed its instance variable `geo_backup_federated_identity_client_id`
+        - Model `DataEncryption` deleted or renamed its instance variable `primary_federated_identity_client_id`
+        - Model `ServerPropertiesForPatch` deleted or renamed its instance variable `fips_mode`
+        - Model `ServerPropertiesForPatch` deleted or renamed its instance variable `source_server_resource_id`
+        - Model `ServerProperties` deleted or renamed its instance variable `fips_mode`
+        - Model `Storage` deleted or renamed its instance variable `auto_grow_increment_percent`
+        - Model `Storage` deleted or renamed its instance variable `auto_grow_max_threshold_mb`
