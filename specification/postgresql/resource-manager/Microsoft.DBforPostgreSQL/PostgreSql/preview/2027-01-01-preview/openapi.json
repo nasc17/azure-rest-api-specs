@@ -1591,12 +1591,6 @@
         "x-ms-examples": {
           "List the capabilities available for a given server.": {
             "$ref": "./examples/CapabilitiesByServerList.json"
-          },
-          "List the capabilities available for an Elastic Cluster when provisioning is disabled.": {
-            "$ref": "./examples/CapabilitiesByServerListForElasticClusterWithProvisioningDisabled.json"
-          },
-          "List the capabilities available for an Elastic Cluster.": {
-            "$ref": "./examples/CapabilitiesByServerListForElasticCluster.json"
           }
         },
         "x-ms-pageable": {
