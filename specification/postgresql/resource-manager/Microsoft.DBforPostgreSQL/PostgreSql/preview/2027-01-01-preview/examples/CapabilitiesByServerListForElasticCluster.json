@@ -1,0 +1,33 @@
+{
+  "parameters": {
+    "api-version": "2027-01-01-preview",
+    "resourceGroupName": "exampleresourcegroup",
+    "serverName": "examplecluster",
+    "subscriptionId": "ffffffff-ffff-ffff-ffff-ffffffffffff"
+  },
+  "responses": {
+    "200": {
+      "body": {
+        "value": [
+          {
+            "name": "FlexibleServerCapabilities",
+            "supportedElasticClustersVersions": [
+              {
+                "name": "17",
+                "supportedFeatures": [],
+                "supportedVersionsToUpgrade": ["18"]
+              },
+              {
+                "name": "18",
+                "supportedFeatures": [],
+                "supportedVersionsToUpgrade": []
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "operationId": "CapabilitiesByServer_List",
+  "title": "List the capabilities available for an Elastic Cluster."
+}
